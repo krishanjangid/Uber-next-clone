@@ -1,6 +1,12 @@
 {
   "name": "uber-next-clone",
   "private": true,
+  "description": "a really cool app",
+  "version": "1.0.0",
+  "engines": {
+    "node": "14.x"
+  },
+  
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -21,12 +27,5 @@
     "tailwind-styled-components": "^2.0.3",
     "tailwindcss": "^2.2.19"
   }
-},
-{
-  "name": "myapp",
-  "description": "a really cool app",
-  "version": "1.0.0",
-  "engines": {
-    "node": "14.x"
-  }
 }
+
