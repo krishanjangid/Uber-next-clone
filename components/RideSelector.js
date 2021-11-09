@@ -10,7 +10,7 @@ const RideSelector = ({pickupCordinates, dropoffCordinates}) =>{
     //get ride duration from mapbox api
     useEffect(() => {
         rideDuration = fetch(
-          `https://api.mapbox.com/directions/v5/mapbox/driving/${pickupCordinates[0]},${pickupCordinates[1]};${dropoffCordinates[0]},${dropoffCordinates[1]}?access_token=sk.eyJ1IjoiaGF3a2V5ZWtrIiwiYSI6ImNrdnBrZWJrbTFzdzAycGtsMzMzdHE0YXMifQ.m58MRPFDavHmfVSnqGAd1g`
+          `https://api.mapbox.com/directions/v5/mapbox/driving/${pickupCordinates[0]},${pickupCordinates[1]};${dropoffCordinates[0]},${dropoffCordinates[1]}?geometries=geojson&access_token=sk.eyJ1IjoiaGF3a2V5ZWtrIiwiYSI6ImNrdnBrZWJrbTFzdzAycGtsMzMzdHE0YXMifQ.m58MRPFDavHmfVSnqGAd1g`
         ).then(res => res.json())
         .then(data => {
             setRideDuration(data.routes[0].duration / 15)
@@ -30,7 +30,7 @@ const RideSelector = ({pickupCordinates, dropoffCordinates}) =>{
                             <Service>{car.service}</Service>
                             <Time>5 Min Away</Time>
                         </CarDetails>
-                        <Price>{'₹' + rideDuration* car.multiplier}</Price>
+                        <Price>{'₹' + (rideDuration).toFixed(2)}</Price>
                     </Car>
                 )) } 
 

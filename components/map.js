@@ -13,8 +13,8 @@ const Map = (props) => {
         container: "map",
         style: 'mapbox://styles/hawkeyekk/ckvn9ctyx5av614pfpqp1exwi',
         center: [75.740056, 26.915973],
-        zoom: 7
-        ,
+        
+        zoom: 7,
         })
 
         if(props.pickupCordinates){
@@ -26,23 +26,49 @@ const Map = (props) => {
            } 
 
         if(props.pickupCordinates && props.dropoffCordinates){
+            
+                
             map.fitBounds([
                 props.dropoffCordinates,
                 props.pickupCordinates
             ],{
-                padding:60
+                padding:60,
+                speed: 0.2,
+                
             })
+
         }
+       
+        map.addControl(new mapboxgl.GeolocateControl({
+            positionOptions: {
+            enableHighAccuracy: true
+            
+
+            },
+            trackUserLocation: true,
+            showUserHeading: true
+            }));
+
+            
 
       },[props.pickupCordinates,props.dropoffCordinates])
 
-      const addToMap =(map, cordinates) =>{
-        const marker1 = new mapboxgl.Marker()
-        .setLngLat(cordinates)
+      const addToMap =(map) =>{
+        const marker1 = new mapboxgl.Marker({
+            color: '#232b2b'
+           })
+        .setLngLat(props.pickupCordinates)
         .addTo(map);
+        const marker2 = new mapboxgl.Marker({
+             color: '#414a4c' 
+            })
+        .setLngLat(props.dropoffCordinates)
+        .addTo(map);
+        
       };
 
 
+    
 
     return (
         <Wrapper id='map'></Wrapper>

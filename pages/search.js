@@ -5,10 +5,10 @@ import Link from 'next/link'
 
 
 const Search = () => {
+    
     const [pickup, setPickup] = useState("");
-    const [dropoff, setDropoff] = useState("")
-    console.log(pickup)
-    console.log(dropoff)
+    const [dropoff, setDropoff] = useState("");
+    // const [cuttenlocation, setCurrentLocation] = useState(pickup);
     return <Wrapper>
         <ButtonContainer> 
             <Link href="/">
@@ -24,8 +24,9 @@ const Search = () => {
           </FromToIcons>
         <InputBoxes>
             <Input placeholder="Enter pickup location"
-            value={pickup}
+            value={pickup} 
             onChange={(e)=> setPickup(e.target.value)} 
+
             />
             <Input placeholder="Where to?" 
             value={dropoff}

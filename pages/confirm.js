@@ -1,9 +1,9 @@
 import React, {  useEffect, useState} from "react";
 import 'tailwindcss/tailwind.css'
 import tw from "tailwind-styled-components"
-import Map from './components/map'
+import Map from "../components/map";
 import { useRouter } from "next/dist/client/router";
-import RideSelector from "./components/RideSelector";
+import RideSelector from "../components/RideSelector";
 import Link from "next/dist/client/link";
 
 const Confirm = () => {
@@ -83,7 +83,7 @@ h-12  cursor-pointer
 `
 const BackButtonContainer = tw.div`
 bg-white h-12 w-12 rounded-full absolute ml-2 mt-2 
-border-2 items-center flex
+items-center flex shadow-md
 `
 
 const ConfirmButton = tw.div`
