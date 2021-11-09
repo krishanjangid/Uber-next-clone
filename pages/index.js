@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import React, {  useEffect, useState } from "react";
 import 'tailwindcss/tailwind.css'
 import tw from "tailwind-styled-components"
-import Map from './components/map'
+import Map from '../components/map'
 import Link from 'next/link'
 import { auth } from '../firebase'
 import { onAuthStateChanged, signOut} from 'firebase/auth';
