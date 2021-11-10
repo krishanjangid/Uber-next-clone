@@ -11,7 +11,7 @@ import { useRoutes } from 'react-router'
 
     const router = useRouter()
 
-    useEffect(() => {
+    useEffect(() => { 
         onAuthStateChanged(auth, user =>{
           if (user) {
              router.push('/')
