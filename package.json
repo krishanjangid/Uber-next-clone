@@ -1,10 +1,11 @@
 {
   "name": "uber-next-clone",
-  "private": true,
+  "private": false,
   "description": "a really cool app",
   "version": "1.0.0",
   "engines": {
-    "node": "14.17.6"
+  "node": "14.17.6"
+  
   },
   "scripts": {
     "dev": "next dev",
