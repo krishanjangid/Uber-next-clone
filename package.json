@@ -1,6 +1,6 @@
 {
   "name": "uber-next-clone",
-  "private": false,
+  "private": true,
   "description": "a really cool app",
   "version": "1.0.0",
   "engines": {
