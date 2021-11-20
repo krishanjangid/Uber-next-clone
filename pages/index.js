@@ -6,7 +6,7 @@ import 'tailwindcss/tailwind.css'
 import tw from "tailwind-styled-components"
 import Map from './components/map'
 import Link from 'next/link'
-import { auth } from '../node_modules/@firebase'
+import { auth } from '../firebase'
 import { onAuthStateChanged, signOut} from 'firebase/auth';
 import { useRouter } from 'next/dist/client/router';
 import { list } from 'postcss';
