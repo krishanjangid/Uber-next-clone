@@ -4,7 +4,7 @@ import tw from 'tailwind-styled-components/dist/tailwind'
 import { useRouter } from 'next/dist/client/router'
 import { signInWithPopup, onAuthStateChanged } from 'firebase/auth'
 import { auth, provider } from '../firebase'
-import { useRoutes } from 'react-router'
+
 
 
  const Login = () => {
