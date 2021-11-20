@@ -1,3 +1,5 @@
+import React from 'react'
+
 export const carList = [
   {
     imgUrl: 'https://i.ibb.co/cyvcpfF/uberx.png',
